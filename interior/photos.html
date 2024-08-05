@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Quartz</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            padding: 20px;
+        }
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .photo-item {
+            position: relative;
+        }
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+        .photo-item:hover .view-product {
+            opacity: 1;
+        }
+        .view-product {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .full-screen-view {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            overflow: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .full-screen-view img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .full-screen-view .details {
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .full-screen-view .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-align: center; color: white;">Quartz</h1>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="images/Qi-1000.jpg" alt="">
+                <span class="photo-number">Qi-1000</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-1002.jpg" alt="">
+                <span class="photo-number">Qi-1002</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-1000.jpg" alt="">
+                <span class="photo-number">Qi-1003</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-1005.jpg" alt="">
+                <span class="photo-number">Qi-1005</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-1007.jpg" alt="">
+                <span class="photo-number">Qi-1007</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-1025.jpg" alt="">
+                <span class="photo-number">Qi-1025</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-1032.jpg" alt="">
+                <span class="photo-number">Qi-1032</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+
+            <div class="photo-item">
+                <img src="images/Qi-1035.jpg" alt="">
+                <span class="photo-number">Qi-1000</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+
+            <div class="photo-item">
+                <img src="images/Qi-1040.jpg" alt="">
+                <span class="photo-number">Qi-1040</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+
+            <div class="photo-item">
+                <img src="images/Qi-1042.jpg" alt="">
+                <span class="photo-number">Qi-1042</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+        
+
+            <div class="photo-item">
+                <img src="images/Qi-5210.jpg" alt="">
+                <span class="photo-number">Qi-5210</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+
+            <div class="photo-item">
+                <img src="images/Qi-5200.jpg" alt="">
+                <span class="photo-number">Qi-5200</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-5230.jpg" alt="">
+                <span class="photo-number">Qi-5230</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-5240.jpg" alt="">
+                <span class="photo-number">Qi-5240</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-5250.jpg" alt="">
+                <span class="photo-number">Qi-5250</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-5270.jpg" alt="">
+                <span class="photo-number">Qi-5270</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-2000.jpg" alt="">
+                <span class="photo-number">Qi-2000</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-2003.jpg" alt="">
+                <span class="photo-number">Qi-1000</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-3036.jpg" alt="">
+                <span class="photo-number">Qi-3036</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">                <img src="images/Qi-7000.jpg" alt="Animal 1">
+                <span class="photo-number">Qi-7000</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-7003.jpg" alt="">
+                <span class="photo-number">Qi-7003</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+            <div class="photo-item">
+                <img src="images/Qi-7009.jpg" alt="">
+                <span class="photo-number">Qi-7009</span>
+                <span class="view-product">View Product</span>
+            </div>
+
+
+
+
+            <!-- Repeat for other images -->
+        </div>
+    </div>
+
+    <!-- Full-Screen View Modal -->
+    <div class="full-screen-view" id="fullScreenView">
+        <span class="close" id="closeView">&times;</span>
+        <img id="fullScreenImage" src="" alt="Full Screen Image">
+        <div class="details" id="imageDetails"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.view-product').forEach(button => {
+            button.addEventListener('click', function() {
+                const photoItem = this.closest('.photo-item');
+                const img = photoItem.querySelector('img');
+                const src = img.src;
+                const alt = img.alt;
+
+                document.getElementById('fullScreenImage').src = src;
+                document.getElementById('imageDetails').textContent = alt;
+                document.getElementById('fullScreenView').style.display = 'flex';
+            });
+        });
+
+        document.getElementById('closeView').addEventListener('click', function() {
+            document.getElementById('fullScreenView').style.display = 'none';
+        });
+
+        document.getElementById('fullScreenView').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+
+<style>
+    .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.photo-item {
+    position: relative;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-number {
+    position: absolute;
+    bottom: 5;
+    left: 45%;
+    transform: translateX(-50%);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: goldenrod;
+    padding: 2px 5px;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+</style> -->
